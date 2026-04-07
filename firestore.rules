@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public read access for projects and testimonials
+    match /projects/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    match /testimonials/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Contacts: anyone can create, only admin can read
+    match /contacts/{document} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+
+    // Site content: public read, admin write
+    match /siteContent/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
