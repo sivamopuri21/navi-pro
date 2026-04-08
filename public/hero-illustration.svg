@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <!-- Background shapes -->
+  <circle cx="650" cy="300" r="250" fill="#d4943a" opacity="0.06"/>
+  <circle cx="700" cy="200" r="150" fill="#0f3d3e" opacity="0.05"/>
+  
+  <!-- Building 1 - Hospital -->
+  <rect x="180" y="200" width="160" height="280" rx="8" fill="#0f3d3e" opacity="0.9"/>
+  <rect x="195" y="220" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="245" y="220" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="295" y="220" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="195" y="270" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="245" y="270" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="295" y="270" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="195" y="320" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="245" y="320" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="295" y="320" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="195" y="370" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="245" y="370" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <rect x="295" y="370" width="35" height="35" rx="4" fill="#d4943a" opacity="0.3"/>
+  <!-- Door -->
+  <rect x="235" y="430" width="50" height="50" rx="4" fill="#d4943a" opacity="0.6"/>
+  <!-- Cross symbol -->
+  <rect x="248" y="180" width="24" height="6" rx="3" fill="#d4943a"/>
+  <rect x="257" y="171" width="6" height="24" rx="3" fill="#d4943a"/>
+  
+  <!-- Building 2 - Modern tower -->
+  <rect x="370" y="140" width="130" height="340" rx="8" fill="#1a5c5e" opacity="0.85"/>
+  <rect x="385" y="160" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="420" y="160" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="455" y="160" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="385" y="200" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="420" y="200" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="455" y="200" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="385" y="240" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="420" y="240" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="455" y="240" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="385" y="280" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="420" y="280" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="455" y="280" width="25" height="25" rx="3" fill="white" opacity="0.15"/>
+  <rect x="385" y="320" width="25" height="25" rx="3" fill="#d4943a" opacity="0.3"/>
+  <rect x="420" y="320" width="25" height="25" rx="3" fill="#d4943a" opacity="0.3"/>
+  <rect x="455" y="320" width="25" height="25" rx="3" fill="#d4943a" opacity="0.3"/>
+  <rect x="385" y="360" width="25" height="25" rx="3" fill="#d4943a" opacity="0.3"/>
+  <rect x="420" y="360" width="25" height="25" rx="3" fill="#d4943a" opacity="0.3"/>
+  <rect x="455" y="360" width="25" height="25" rx="3" fill="#d4943a" opacity="0.3"/>
+  <rect x="410" y="430" width="50" height="50" rx="4" fill="#d4943a" opacity="0.5"/>
+  
+  <!-- Building 3 - Lab -->
+  <rect x="530" y="260" width="120" height="220" rx="8" fill="#0f3d3e" opacity="0.75"/>
+  <rect x="545" y="280" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="580" y="280" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="615" y="280" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="545" y="320" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="580" y="320" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="615" y="320" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="545" y="360" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="580" y="360" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="615" y="360" width="25" height="25" rx="3" fill="#d4943a" opacity="0.25"/>
+  <rect x="570" y="430" width="40" height="50" rx="4" fill="#d4943a" opacity="0.5"/>
+  <!-- Flask icon -->
+  <path d="M582 245 L582 255 L572 270 L592 270 Z" fill="#d4943a" opacity="0.6"/>
+  <rect x="579" y="238" width="6" height="10" rx="2" fill="#d4943a" opacity="0.6"/>
+  
+  <!-- Ground -->
+  <rect x="140" y="480" width="560" height="4" rx="2" fill="#0f3d3e" opacity="0.2"/>
+  
+  <!-- Crane -->
+  <rect x="120" y="100" width="6" height="380" fill="#d4943a" opacity="0.3"/>
+  <rect x="80" y="100" width="120" height="6" fill="#d4943a" opacity="0.3"/>
+  <line x1="126" y1="106" x2="200" y2="200" stroke="#d4943a" stroke-width="2" opacity="0.2"/>
+  <line x1="126" y1="106" x2="80" y2="200" stroke="#d4943a" stroke-width="2" opacity="0.2"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="680" cy="450" r="4" fill="#d4943a" opacity="0.2"/>
+  <circle cx="700" cy="430" r="3" fill="#d4943a" opacity="0.15"/>
+  <circle cx="660" cy="440" r="5" fill="#0f3d3e" opacity="0.1"/>
+  <circle cx="720" cy="460" r="3" fill="#d4943a" opacity="0.2"/>
+</svg>

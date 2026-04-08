@@ -95,7 +95,7 @@ export function ProjectsManager() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-blue-deep">Projects</h2>
+        <h2 className="text-xl font-bold text-primary">Projects</h2>
         {!showForm && (
           <Button onClick={() => setShowForm(true)} size="sm">
             <FiPlus className="mr-1" /> Add Project
@@ -107,7 +107,7 @@ export function ProjectsManager() {
       {showForm && (
         <div className="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold text-blue-deep">
+            <h3 className="font-semibold text-primary">
               {editing ? "Edit Project" : "New Project"}
             </h3>
             <button onClick={resetForm} className="text-gray-400 hover:text-gray-600 cursor-pointer">
@@ -120,14 +120,14 @@ export function ProjectsManager() {
               placeholder="Project Title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none"
             />
             <textarea
               placeholder="Project Description"
               rows={4}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none resize-none"
             />
 
             {/* Existing images */}
@@ -149,8 +149,8 @@ export function ProjectsManager() {
 
             {/* File upload */}
             <div>
-              <label className="flex items-center gap-2 px-4 py-3 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-gold/50 transition-colors">
-                <FiUpload className="text-gold" />
+              <label className="flex items-center gap-2 px-4 py-3 border-2 border-dashed border-gray-200 rounded-xl cursor-pointer hover:border-accent/50 transition-colors">
+                <FiUpload className="text-accent" />
                 <span className="text-sm text-gray-500">
                   {files.length > 0 ? `${files.length} file(s) selected` : "Upload images"}
                 </span>
@@ -200,13 +200,13 @@ export function ProjectsManager() {
                 )}
               </div>
               <div className="flex-1 min-w-0">
-                <h4 className="font-semibold text-blue-deep truncate">{p.title}</h4>
+                <h4 className="font-semibold text-primary truncate">{p.title}</h4>
                 <p className="text-gray-500 text-sm truncate">{p.description}</p>
               </div>
               <div className="flex gap-2 shrink-0">
                 <button
                   onClick={() => openEdit(p)}
-                  className="p-2 text-gray-400 hover:text-gold transition-colors cursor-pointer"
+                  className="p-2 text-gray-400 hover:text-accent transition-colors cursor-pointer"
                   aria-label="Edit project"
                 >
                   <FiEdit2 size={18} />

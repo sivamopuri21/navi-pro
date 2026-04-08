@@ -59,7 +59,7 @@ export function ContentManager() {
 
   return (
     <div>
-      <h2 className="text-xl font-bold text-blue-deep mb-6">Site Content</h2>
+      <h2 className="text-xl font-bold text-primary mb-6">Site Content</h2>
 
       <div className="bg-white rounded-2xl shadow-md p-6 border border-gray-100 space-y-6">
         {/* About */}
@@ -71,7 +71,7 @@ export function ContentManager() {
             rows={6}
             value={about}
             onChange={(e) => setAbout(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none resize-none"
+            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none resize-none"
             placeholder="Write about your company..."
           />
         </div>
@@ -85,7 +85,7 @@ export function ContentManager() {
             {services.map((s, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-1 px-3 py-1.5 bg-gold/10 text-gold rounded-full text-sm"
+                className="inline-flex items-center gap-1 px-3 py-1.5 bg-accent/10 text-accent rounded-full text-sm"
               >
                 {s}
                 <button
@@ -105,7 +105,7 @@ export function ContentManager() {
               onChange={(e) => setNewService(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && addService()}
               placeholder="Add a service..."
-              className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none text-sm"
+              className="flex-1 px-4 py-2.5 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none text-sm"
             />
             <Button onClick={addService} size="sm" variant="ghost">
               <FiPlus size={16} />

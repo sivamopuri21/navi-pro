@@ -82,7 +82,7 @@ export function TestimonialsManager() {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-blue-deep">Testimonials</h2>
+        <h2 className="text-xl font-bold text-primary">Testimonials</h2>
         {!showForm && (
           <Button onClick={() => setShowForm(true)} size="sm">
             <FiPlus className="mr-1" /> Add Testimonial
@@ -93,7 +93,7 @@ export function TestimonialsManager() {
       {showForm && (
         <div className="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold text-blue-deep">
+            <h3 className="font-semibold text-primary">
               {editing ? "Edit Testimonial" : "New Testimonial"}
             </h3>
             <button onClick={resetForm} className="text-gray-400 hover:text-gray-600 cursor-pointer">
@@ -106,14 +106,14 @@ export function TestimonialsManager() {
               placeholder="Client Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none"
             />
             <textarea
               placeholder="Feedback"
               rows={4}
               value={feedback}
               onChange={(e) => setFeedback(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none resize-none"
             />
             <div className="flex gap-3">
               <Button onClick={handleSave} disabled={saving}>
@@ -141,13 +141,13 @@ export function TestimonialsManager() {
               className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex items-start gap-4"
             >
               <div className="flex-1 min-w-0">
-                <h4 className="font-semibold text-blue-deep">{t.name}</h4>
+                <h4 className="font-semibold text-primary">{t.name}</h4>
                 <p className="text-gray-500 text-sm mt-1 line-clamp-2">{t.feedback}</p>
               </div>
               <div className="flex gap-2 shrink-0">
                 <button
                   onClick={() => openEdit(t)}
-                  className="p-2 text-gray-400 hover:text-gold transition-colors cursor-pointer"
+                  className="p-2 text-gray-400 hover:text-accent transition-colors cursor-pointer"
                   aria-label="Edit testimonial"
                 >
                   <FiEdit2 size={18} />

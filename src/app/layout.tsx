@@ -8,24 +8,25 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: "Navi Pro Projects Pvt. Ltd. | Civil & Interior Works",
-    template: "%s | Navi Pro Projects",
+    default: "NaviPro Projects Private Limited | Civil & Interior Works",
+    template: "%s | NaviPro Projects",
   },
   description:
-    "Navi Pro Projects Pvt. Ltd. delivers world-class civil and interior solutions for hospitals, laboratories, and infrastructure projects across India.",
+    "NaviPro Projects Private Limited delivers world-class civil and interior solutions for hospitals, laboratories, and infrastructure projects across India.",
   keywords: [
     "civil works",
     "interior works",
     "hospital construction",
     "lab setup",
     "infrastructure projects",
-    "Navi Pro Projects",
+    "NaviPro Projects",
+    "Hyderabad",
   ],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "Navi Pro Projects Pvt. Ltd.",
-    title: "Navi Pro Projects Pvt. Ltd. | Civil & Interior Works",
+    siteName: "NaviPro Projects Private Limited",
+    title: "NaviPro Projects Private Limited | Civil & Interior Works",
     description:
       "Delivering excellence in civil & interior works for hospitals, labs, and infrastructure projects.",
   },

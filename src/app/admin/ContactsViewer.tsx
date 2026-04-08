@@ -18,7 +18,7 @@ export function ContactsViewer() {
 
   return (
     <div>
-      <h2 className="text-xl font-bold text-blue-deep mb-6">Contact Submissions</h2>
+      <h2 className="text-xl font-bold text-primary mb-6">Contact Submissions</h2>
 
       {loading ? (
         <div className="space-y-4">
@@ -36,7 +36,7 @@ export function ContactsViewer() {
               className="bg-white rounded-xl shadow-sm border border-gray-100 p-5"
             >
               <div className="flex flex-wrap items-center gap-4 mb-3">
-                <span className="flex items-center gap-1.5 text-sm font-medium text-blue-deep">
+                <span className="flex items-center gap-1.5 text-sm font-medium text-primary">
                   <FiUser size={14} /> {c.name}
                 </span>
                 <span className="flex items-center gap-1.5 text-sm text-gray-500">

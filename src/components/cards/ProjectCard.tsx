@@ -53,11 +53,11 @@ export function ProjectCard({ project, variant = "grid", onClick }: Props) {
         />
       </div>
       <div className="p-5">
-        <h3 className="font-bold text-lg text-blue-deep group-hover:text-gold transition-colors">
+        <h3 className="font-bold text-lg text-primary group-hover:text-accent transition-colors">
           {project.title}
         </h3>
         <p className="text-gray-500 text-sm mt-2 line-clamp-3">{project.description}</p>
-        <span className="inline-block mt-3 text-gold text-sm font-medium">
+        <span className="inline-block mt-3 text-accent text-sm font-medium">
           View Details →
         </span>
       </div>

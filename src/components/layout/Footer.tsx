@@ -1,29 +1,28 @@
 "use client";
 import Link from "next/link";
-import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { FiMail, FiMapPin } from "react-icons/fi";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-blue-deep text-white">
+    <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center text-white font-bold text-sm">
-                NP
-              </div>
-              <span className="font-bold text-lg">Navi Pro Projects</span>
+            <div className="mb-4">
+              <Logo size="md" light />
             </div>
+            <p className="text-sm font-medium text-gray-200 mb-2">
+              NaviPro Projects Private Limited
+            </p>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Navi Pro Projects Pvt. Ltd. — Delivering excellence in civil &amp;
-              interior works for hospitals, labs, and infrastructure projects.
+              Delivering excellence in civil &amp; interior works for hospitals,
+              labs, and infrastructure projects across India.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-gold mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-accent mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               {[
                 { href: "/about", label: "About Us" },
@@ -32,7 +31,7 @@ export function Footer() {
                 { href: "/contact", label: "Contact" },
               ].map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="hover:text-gold transition-colors">
+                  <Link href={l.href} className="hover:text-accent transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -40,28 +39,31 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-gold mb-4">Contact</h3>
+            <h3 className="font-semibold text-accent mb-4">Contact</h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-start gap-2">
                 <FiMapPin className="mt-0.5 shrink-0" />
-                <span>Hyderabad, Telangana, India</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <FiPhone className="shrink-0" />
-                <span>+91 XXXXX XXXXX</span>
+                <span>
+                  #G-6, Aastha Meadows, Lalamma Gardens,
+                  <br />
+                  Puppalaguda, Manikonda, Hyderabad,
+                  <br />
+                  Telangana
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <FiMail className="shrink-0" />
-                <span>info@naviproprojects.com</span>
+                <a href="mailto:navipro89@gmail.com" className="hover:text-accent transition-colors">
+                  navipro89@gmail.com
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-400">
-          &copy; {new Date().getFullYear()} Navi Pro Projects Pvt. Ltd. All rights reserved.
+          &copy; {new Date().getFullYear()} NaviPro Projects Private Limited. All rights reserved.
         </div>
       </div>
     </footer>

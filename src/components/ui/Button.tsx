@@ -9,8 +9,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 const base = "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer";
 
 const variants: Record<string, string> = {
-  primary: "bg-gold text-white hover:bg-gold-dark focus:ring-gold shadow-md hover:shadow-lg",
-  secondary: "bg-blue-deep text-white hover:bg-blue-medium focus:ring-blue-deep shadow-md",
+  primary: "bg-accent text-white hover:bg-accent-dark focus:ring-accent shadow-md hover:shadow-lg",
+  secondary: "bg-primary text-white hover:bg-primary-light focus:ring-primary shadow-md",
   danger: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
   ghost: "bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-300",
 };
