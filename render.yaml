@@ -3,7 +3,7 @@ services:
     name: navi-pro
     runtime: node
     buildCommand: npm install && npm run build
-    startCommand: npm run start
+    startCommand: npm run start -- -p 10000
     envVars:
       - key: NODE_VERSION
         value: "20"
