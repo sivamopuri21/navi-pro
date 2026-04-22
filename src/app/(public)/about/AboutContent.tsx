@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { FiTarget, FiEye, FiHeart } from "react-icons/fi";
 
 const values = [
-  { icon: FiTarget, title: "Mission", desc: "To deliver world-class civil and interior solutions that exceed expectations, on time and within budget." },
-  { icon: FiEye, title: "Vision", desc: "To be the most trusted name in hospital construction, lab setup, and infrastructure development across India." },
+  { icon: FiTarget, title: "Mission", desc: "To deliver world-class, specialized healthcare infrastructure by integrating advanced engineering with seamless turnkey solutions. From complex radiation oncology vaults to high-precision diagnostic suites, we bridge the gap between architectural design and clinical readiness, ensuring every facility we build meets the highest standards of safety, technology, and healing." },
+  { icon: FiEye, title: "Vision", desc: "To be the premier pan-India benchmark for specialized medical construction, recognized for transforming complex clinical requirements into state-of-the-art facilities that empower healthcare providers to deliver life-saving care without limits." },
   { icon: FiHeart, title: "Values", desc: "Integrity, quality, innovation, and a deep commitment to client satisfaction drive everything we do." },
 ];
 
