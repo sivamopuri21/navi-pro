@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | NaviPro Projects",
   },
   description:
-    "NaviPro Projects Private Limited delivers world-class civil and interior solutions for hospitals, laboratories, and infrastructure projects across India.",
+    "​Building the future of healthcare requires more than just bricks and mortar; it requires precision, regulatory mastery, and a deep understanding of life-saving technology",
   keywords: [
     "civil works",
     "interior works",

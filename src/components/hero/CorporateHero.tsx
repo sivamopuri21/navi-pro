@@ -26,9 +26,9 @@ export function CorporateHero() {
               <span className="text-accent">Infrastructure</span> Today
             </h1>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed max-w-xl">
-              NaviPro Projects Private Limited delivers world-class civil and interior
-              solutions for hospitals, laboratories, and infrastructure projects
-              across India.
+              Building the future of healthcare requires more than just bricks
+              and mortar; it requires precision, regulatory mastery, and a deep
+              understanding of life-saving technology.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/projects">
