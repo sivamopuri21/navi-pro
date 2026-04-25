@@ -2,6 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  pointOfContact: string;
   imageUrls: string[];
   createdAt: number;
 }
@@ -10,6 +11,7 @@ export interface Testimonial {
   id: string;
   name: string;
   feedback: string;
+  approved: boolean;
   createdAt: number;
 }
 

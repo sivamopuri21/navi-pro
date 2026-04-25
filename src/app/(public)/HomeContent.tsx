@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { getTemplate } from "@/lib/template";
-import { getProjects, getTestimonials } from "@/lib/firestore";
+import { getProjects, getApprovedTestimonials } from "@/lib/firestore";
 import type { Project, Testimonial } from "@/types";
 import { CorporateHero } from "@/components/hero/CorporateHero";
 import { ShowcaseHero } from "@/components/hero/ShowcaseHero";
@@ -31,7 +31,7 @@ export function HomeContent() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    Promise.all([getProjects(), getTestimonials()])
+    Promise.all([getProjects(), getApprovedTestimonials()])
       .then(([p, t]) => { setProjects(p); setTestimonials(t); })
       .finally(() => setLoading(false));
   }, []);
@@ -83,21 +83,6 @@ export function HomeContent() {
         <div className="text-center mt-10">
           <Link href="/projects"><Button>View All Projects</Button></Link>
         </div>
-      </Section>
-
-      <Section>
-        <SectionTitle sub="What our clients say about working with us">Testimonials</SectionTitle>
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => <TestimonialSkeleton key={i} />)}
-          </div>
-        ) : testimonials.length === 0 ? (
-          <EmptyState message="Testimonials coming soon" />
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.slice(0, 3).map((t) => <TestimonialCard key={t.id} testimonial={t} />)}
-          </div>
-        )}
       </Section>
 
       <Section dark>

@@ -24,6 +24,7 @@ export function ProjectsManager() {
   const [description, setDescription] = useState("");
   const [files, setFiles] = useState<File[]>([]);
   const [existingImages, setExistingImages] = useState<string[]>([]);
+  const [pointOfContact, setPointOfContact] = useState("");
   const [saving, setSaving] = useState(false);
 
   const load = () => {
@@ -40,6 +41,7 @@ export function ProjectsManager() {
     setEditing(null);
     setTitle("");
     setDescription("");
+    setPointOfContact("");
     setFiles([]);
     setExistingImages([]);
   };
@@ -48,6 +50,7 @@ export function ProjectsManager() {
     setEditing(p);
     setTitle(p.title);
     setDescription(p.description);
+    setPointOfContact(p.pointOfContact || "");
     setExistingImages(p.imageUrls || []);
     setFiles([]);
     setShowForm(true);
@@ -66,10 +69,10 @@ export function ProjectsManager() {
       const allImages = [...existingImages, ...newUrls];
 
       if (editing) {
-        await updateProject(editing.id, { title, description, imageUrls: allImages });
+        await updateProject(editing.id, { title, description, pointOfContact, imageUrls: allImages });
         toast.success("Project updated");
       } else {
-        await addProject({ title, description, imageUrls: allImages, createdAt: Date.now() });
+        await addProject({ title, description, pointOfContact, imageUrls: allImages, createdAt: Date.now() });
         toast.success("Project added");
       }
       resetForm();
@@ -128,6 +131,13 @@ export function ProjectsManager() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none resize-none"
+            />
+            <input
+              type="text"
+              placeholder="Point of Contact (e.g. Dr. Sharma - 9876543210)"
+              value={pointOfContact}
+              onChange={(e) => setPointOfContact(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none"
             />
 
             {/* Existing images */}

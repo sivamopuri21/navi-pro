@@ -43,6 +43,18 @@ export async function getTestimonials(): Promise<Testimonial[]> {
   return snap.docs.map((d) => ({ id: d.id, ...d.data() } as Testimonial));
 }
 
+export async function getApprovedTestimonials(): Promise<Testimonial[]> {
+  const q = query(testimonialsRef, orderBy("createdAt", "desc"));
+  const snap = await getDocs(q);
+  return snap.docs
+    .map((d) => ({ id: d.id, ...d.data() } as Testimonial))
+    .filter((t) => t.approved === true);
+}
+
+export async function submitTestimonial(data: { name: string; feedback: string }) {
+  return addDoc(testimonialsRef, { ...data, approved: false, createdAt: Date.now() });
+}
+
 export async function addTestimonial(data: Omit<Testimonial, "id">) {
   return addDoc(testimonialsRef, { ...data, createdAt: Date.now() });
 }

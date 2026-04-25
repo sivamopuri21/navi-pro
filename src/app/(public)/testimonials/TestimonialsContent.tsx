@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getTestimonials } from "@/lib/firestore";
+import { getApprovedTestimonials } from "@/lib/firestore";
 import type { Testimonial } from "@/types";
-import { Section } from "@/components/ui/Section";
+import { Section, SectionTitle } from "@/components/ui/Section";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { TestimonialSkeleton } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
@@ -12,7 +12,9 @@ export function TestimonialsContent() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => { getTestimonials().then(setTestimonials).finally(() => setLoading(false)); }, []);
+  useEffect(() => {
+    getApprovedTestimonials().then(setTestimonials).finally(() => setLoading(false));
+  }, []);
 
   return (
     <>
@@ -28,12 +30,13 @@ export function TestimonialsContent() {
       </section>
 
       <Section>
+        <SectionTitle sub="What our clients say about working with us">Testimonials</SectionTitle>
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((i) => <TestimonialSkeleton key={i} />)}
           </div>
         ) : testimonials.length === 0 ? (
-          <EmptyState message="No testimonials yet" />
+          <EmptyState message="No testimonials yet. Click the Feedback button to share your experience!" />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((t) => <TestimonialCard key={t.id} testimonial={t} />)}

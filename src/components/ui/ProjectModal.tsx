@@ -97,6 +97,11 @@ export function ProjectModal({ project, onClose }: Props) {
           {/* Content */}
           <div className="p-6 sm:p-8 overflow-y-auto max-h-[calc(90vh-20rem)]">
             <h2 className="text-2xl font-bold text-primary">{project.title}</h2>
+            {project.pointOfContact && (
+              <p className="mt-2 text-sm text-accent font-medium">
+                Point of Contact: {project.pointOfContact}
+              </p>
+            )}
             <p className="mt-4 text-gray-600 leading-relaxed whitespace-pre-line">
               {project.description}
             </p>
