@@ -78,6 +78,10 @@ export async function getContacts(): Promise<Contact[]> {
   return snap.docs.map((d) => ({ id: d.id, ...d.data() } as Contact));
 }
 
+export async function deleteContact(id: string) {
+  return deleteDoc(doc(db, "contacts", id));
+}
+
 // ── Site Content ──
 export async function getSiteContent(): Promise<SiteContent | null> {
   const snap = await getDoc(doc(db, "siteContent", "main"));
