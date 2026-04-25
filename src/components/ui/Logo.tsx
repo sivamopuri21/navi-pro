@@ -1,21 +1,26 @@
 "use client";
+import Image from "next/image";
 
 interface Props {
   size?: "sm" | "md" | "lg";
   light?: boolean;
 }
 
-export function Logo({ size = "md", light }: Props) {
+export function Logo({ size = "md" }: Props) {
   const sizes = {
-    sm: "text-lg",
-    md: "text-xl",
-    lg: "text-3xl",
+    sm: "h-13",
+    md: "h-17",
+    lg: "h-23",
   };
 
   return (
-    <div className={`${sizes[size]} font-bold tracking-tight leading-tight`}>
-      <span className={light ? "text-white" : "text-primary"}>Navi</span>
-      <span className="text-accent">Pro</span>
-    </div>
+    <Image
+      src="/logo-navipro.png"
+      alt="NaviPro Projects"
+      width={200}
+      height={80}
+      className={`${sizes[size]} w-auto object-contain`}
+      priority
+    />
   );
 }
