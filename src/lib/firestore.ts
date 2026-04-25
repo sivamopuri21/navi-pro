@@ -92,3 +92,15 @@ export async function getSiteContent(): Promise<SiteContent | null> {
 export async function updateSiteContent(data: Partial<SiteContent>) {
   return updateDoc(doc(db, "siteContent", "main"), data);
 }
+
+// ── Settings ──
+export async function getContactRetentionDays(): Promise<number> {
+  const snap = await getDoc(doc(db, "settings", "contacts"));
+  if (!snap.exists()) return 30;
+  return snap.data().retentionDays ?? 30;
+}
+
+export async function setContactRetentionDays(days: number) {
+  const { setDoc } = await import("firebase/firestore");
+  return setDoc(doc(db, "settings", "contacts"), { retentionDays: days }, { merge: true });
+}
