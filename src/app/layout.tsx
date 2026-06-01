@@ -9,6 +9,10 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/logo-navipro.png",
+    apple: "/logo-navipro.png",
+  },
   title: {
     default: "NaviPro Projects Private Limited | Civil & Interior Works",
     template: "%s | NaviPro Projects",
